@@ -1,8 +1,8 @@
 import random 
 
 items = [
-    'Variant_0.md',
-    'Variant_1.md'
+    './TaskGenerator/Variant_0.md',
+    './TaskGenerator/Variant_1.md'
 ]
 
 readmefilename = "README.md"
