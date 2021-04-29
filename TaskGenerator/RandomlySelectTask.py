@@ -5,7 +5,7 @@ items = [
     'Variant_1.md'
 ]
 
-readmefilename = "../README.md"
+readmefilename = "README.md"
 
 taskname = random.sample(items,  1)
 
