@@ -7,7 +7,8 @@ items = [
 
 readmefilename = "README.md"
 
-taskname = random.sample(items,  1)
+taskname = random.sample(items,  1)[0]
+print(taskname)
 
 with open(readmefilename, 'r') as readmefilehandle:
         readmecontent = readmefilehandle.read()
