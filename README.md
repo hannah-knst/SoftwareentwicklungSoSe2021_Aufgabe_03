@@ -1,6 +1,6 @@
 # Softwareentwicklung SoSe2021 - Aufgabe 04
 
-Mit dem Aufgabeblatt werden die in der Vorlesung vorgestellten Basiskonzepte der Programmiersprache C# vertieft.
+Mit dem Aufgabeblatt wird die Anwendung grundlegender Vorgehensweisen unter Git und GitHub vermittelt.
 
 ## Bearbeitungszeit
 
