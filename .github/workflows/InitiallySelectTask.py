@@ -16,6 +16,8 @@ import random
 
 git_message = os.environ['MESSAGE']
 git_user = os.environ['USER']
+
+githubbotname = "github-classroom[bot]"
 readmefilename = "./README.md"
 loggingfilename = "./.content/task.log"
 splitingWords="## Aufgabenvariante"
@@ -23,7 +25,7 @@ splitingWords="## Aufgabenvariante"
 print(git_message)
 print(git_user)
 
-if git_user == "github-classroom":
+if git_user == githubbotname:
 
   items = [
     './.github/workflows/tasks/Variant_0.md',
