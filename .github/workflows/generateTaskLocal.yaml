@@ -1,10 +1,10 @@
-name: Event Loggger
+name: Task generator 
 
 on: push
 
 jobs:
   log-github-event-goodies:
-    name: "LOG Everything on GitHub Event"
+    name: "Provide task randomly"
     runs-on: ubuntu-latest
     steps:
         # Checkout repository
@@ -16,6 +16,5 @@ jobs:
           MESSAGE: ${{github.event.head_commit.message}}
           USER: ${{github.event.pusher.name}}
         run: |
-          echo "${{github.event.head_commit}}"
           python3 .github/workflows/InitiallySelectTask.py
           
