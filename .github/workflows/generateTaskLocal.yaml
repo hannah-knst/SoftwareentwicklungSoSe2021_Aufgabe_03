@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Logging
+        env:
+          MESSAGE: ${{github.event.head_commit.message}}
+          USER: ${{github.event.head_commit.user.login}}
         run: |
-          echo "${{github.event.head_commit.message}}"
-          echo "${{github.event.head_commit.user.login}}"
+          python ./TaskGenerator/InitiallySelectTask.py
           
