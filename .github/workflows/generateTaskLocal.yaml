@@ -16,5 +16,6 @@ jobs:
           MESSAGE: ${{github.event.head_commit.message}}
           USER: ${{github.event.head_commit.author.login}}
         run: |
+          echo "${{github.event.head_commit}}"
           python3 .github/workflows/InitiallySelectTask.py
           
