@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, fork]
+on: [fork]
 
 jobs:
   build:
