@@ -11,10 +11,24 @@ jobs:
       - name: Check out current repository
         uses: actions/checkout@v2
         
-      - name: Logging
+      - name: Run generation script
         env:
           MESSAGE: ${{github.event.head_commit.message}}
           USER: ${{github.event.pusher.name}}
         run: |
           python3 .github/workflows/InitiallySelectTask.py
           
+      - name: Commit files
+        run: |
+             git config --local user.email "action@github.com"
+             git config --local user.name "GitHub Action"
+             git add README.md
+             git add .github/workflows/tasks/Task.log
+             git status
+             git commit -m "Replace Task" || echo "Task unchanged"
+             
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+             github_token: ${{ secrets.GITHUB_TOKEN }}
+             branch: main
