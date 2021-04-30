@@ -1,0 +1,50 @@
+@startuml
+actor Kunde
+actor Maintainer
+actor Developer
+Kunde -> Maintainer : Definition [[http://plantuml.com/start{Aufgabe 00} Auftrag]]
+== Initialisierung ==
+Maintainer -> Maintainer: Konfiguration [[https://docs.github.com/en/organizations/organizing-members-into-teams/managing-code-review-assignment-for-your-team{Review Konfiguration} Reviews]]
+Maintainer -> Maintainer: Anlegen [[https://guides.github.com/features/issues/{Mastering Issues} Issue]] "txt_to_md"
+Maintainer -> Developer:  Zuweisung Issue
+== Implementierung ==
+activate Maintainer
+Maintainer -> Maintainer:  Monitoring Projekt
+Developer --> Maintainer:  //Issue in progress//
+activate Developer
+Developer -> Developer:  Anlegen eines Branches
+Developer -> Developer:  Implementieren 1
+note right
+ * Anlegen neue Datei
+ * Kopieren der txt Inhalte
+ * Formatieren als md
+end note
+Developer -> Developer:  Commiten
+Developer -> Developer:  Implementieren 2
+note right
+ * Ergänzen eines Bildes
+end note
+Developer -> Developer:  Commiten
+== Review ==
+Developer -> Developer:   Starte  [[https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request {Guideline Pull request} Pull request]]
+Developer --> Maintainer : Pull request 
+Developer --> Maintainer : Anforderung [[https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews#re-requesting-a-review {Guideline Reviews on Github} Review]]
+Maintainer -> Developer :  Anforderung Nachbesserungen
+note left
+ * Einfügen eines Bildes
+ * Rechtschreibkorrektur
+end note
+Developer -> Developer:  Implementieren 3
+note right
+ * Korrektur der Fehler
+ * Einfügen einer Grafik
+end note
+Developer -> Maintainer :  Bitte um Rereview
+Maintainer -> Developer :  Review abgeschlossen
+Maintainer -> Maintainer:  Abschluss Pull request
+deactivate Developer
+== Deploy ==
+Maintainer -> Maintainer:  Abschluss des Pullrequests
+Maintainer -> Maintainer:  Generierung Release
+deactivate Maintainer
+@enduml

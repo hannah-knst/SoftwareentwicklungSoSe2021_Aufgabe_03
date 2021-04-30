@@ -23,7 +23,7 @@ jobs:
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
              git add README.md
-             git add .github/workflows/tasks/Task.log
+             git add ./.content/task.log
              git status
              git commit -m "Replace Task" || echo "Task unchanged"
              
