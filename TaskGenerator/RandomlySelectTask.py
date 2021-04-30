@@ -1,3 +1,16 @@
+# The script replace actual task descriptions by copying content from individual task 
+# files to a specific task sheet. 
+# 
+#     items                        README.md
+#               Random Selection                           
+#     +-----+   during fork        +-------------+
+#   +-----+ |   operations         | General     |  constant
+#   |     | | ----------+          | Information |
+#   |     | |           |          +-------------+
+#   |     |-+           +--------->| Variable    |
+#   +-----+                        | Part        | 
+#                                  +-------------+
+
 import random 
 import logging
 
@@ -8,6 +21,7 @@ items = [
 
 readmefilename = "README.md"
 loggingfilename = "./TaskGenerator/TaskHistory.log"
+splitingWords="## Aufgabenvariante"
 
 taskname = random.sample(items,  1)[0]
 print(taskname)
@@ -18,7 +32,7 @@ with open(readmefilename, 'r') as readmefilehandle:
 with open(taskname, 'r') as taskfilehandle:
         taskcontent = taskfilehandle.read()
 
-newreadmecontent = readmecontent.split("## Aufgabenvariante")[0] + taskcontent
+newreadmecontent = readmecontent.split(splitingWords)[0] + taskcontent
 
 with open(readmefilename, 'w') as readmefilehandle:
         readmefilehandle.write(newreadmecontent)
@@ -32,5 +46,3 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 fh.setFormatter(formatter)
 logger.addHandler(fh)
 logger.debug(taskname)
-                
-print("Aus die Maus!")
