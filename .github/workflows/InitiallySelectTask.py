@@ -28,7 +28,7 @@ items = [
 ]
 
 readmefilename = "./README.md"
-loggingfilename = "./.github/workflows/Task.log"
+loggingfilename = ".github/workflows/tasks/Task.log"
 splitingWords="## Aufgabenvariante"
 
 taskname = random.sample(items,  1)[0]
