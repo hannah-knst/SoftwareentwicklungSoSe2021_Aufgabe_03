@@ -29,7 +29,7 @@ jobs:
              git config --local user.name "GitHub Action"
              git add README.md
              git status 
-             git commit -m "Replace Task - ${{ env.TASKFILE }}" || echo "Task unchanged"
+             git commit -m "Inital task selection - ${{ env.TASKFILE }}" || echo "Task unchanged"
              
       - name: Push changes
         uses: ad-m/github-push-action@master
