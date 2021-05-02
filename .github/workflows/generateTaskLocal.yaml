@@ -6,8 +6,6 @@ jobs:
   log-github-event-goodies:
     name: "Provide task randomly"
     runs-on: ubuntu-latest
-    env:
-      TASKFILE: 'not defined'
     steps:
         # Checkout repository
       - name: Check out current repository
@@ -21,17 +19,17 @@ jobs:
              python3 .github/workflows/InitiallySelectTask.py
              echo "------------------"
              echo "$TASK"
-             echo "TASKFILE=echo \"$TASK\"" >> $GITHUB_ENV
-             echo "$TASKFILE"
+             echo "task_file = echo "$TASK" >> $GITHUB_ENV
+             echo "${{ env.task_file }}"
           
       - name: Commit files
         run: |
-             echo "$TASKFILE"
+             echo "${{ env.task_file }}"
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
              git add README.md
              git status
-             git commit -m "Replace Task - $TASK" || echo "Task unchanged"
+             git commit -m "Replace Task - ${{ env.task_file }}" || echo "Task unchanged"
              
       - name: Push changes
         uses: ad-m/github-push-action@master
