@@ -1,7 +1,7 @@
 # The script replace actual task descriptions by copying content from individual task 
 # files to a specific task sheet. 
 # 
-#     items                        README.md
+# .content/tasks                   README.md
 #               Random Selection                           
 #     +-----+   during fork        +-------------+
 #   +-----+ |   operations         | General     |  constant
@@ -19,7 +19,6 @@ git_user = os.environ['USER']
 
 githubbotname = "github-classroom[bot]"
 readmefilename = "./README.md"
-loggingfilename = "./.content/task.log"
 splitingWords="## Aufgabenvariante"
 
 print(git_message)
@@ -28,7 +27,7 @@ print(git_user)
 if git_user != githubbotname:
   print("This is not an initial commit")
 
-if git_user == githubbotname:
+if git_user #== githubbotname:
 
   items = [
     './.content/tasks/Variant_0.md',
@@ -48,13 +47,10 @@ if git_user == githubbotname:
           taskcontent = taskfilehandle.read()
   
   newreadmecontent = readmecontent.split(splitingWords)[0] + taskcontent
+  print(newreadmecontent)
   
   # Write adapted README.md
-  with open(readmefilename, 'w') as readmefilehandle:
-          readmefilehandle.write(newreadmecontent)
-  
-  # Write task identifier to separate file
-  with open(loggingfilename, 'w') as loggingfilehandle:
-          loggingfilehandle.write(taskname)
- 
+  # with open(readmefilename, 'w') as readmefilehandle:
+  #        readmefilehandle.write(newreadmecontent)
+   
   os.environ['TASK'] = taskname

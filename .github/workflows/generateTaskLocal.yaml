@@ -23,9 +23,8 @@ jobs:
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
              git add README.md
-             git add ./.content/task.log
              git status
-             git commit -m "Replace Task" || echo "Task unchanged"
+             git commit -m "Replace Task - $TASK" || echo "Task unchanged"
              
       - name: Push changes
         uses: ad-m/github-push-action@master
