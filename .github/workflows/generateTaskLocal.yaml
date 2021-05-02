@@ -7,7 +7,6 @@ jobs:
     name: "Provide task randomly"
     runs-on: ubuntu-latest
     steps:
-        # Checkout repository
       - name: Check out current repository
         uses: actions/checkout@v2
         
@@ -24,7 +23,6 @@ jobs:
           
       - name: Commit files
         run: |
-             echo "${{ env.TASKFILE }}"
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
              git add README.md

@@ -28,7 +28,7 @@ print(git_user)
 if git_user != githubbotname:
   print("This is not an initial commit")
 
-if git_user: #== githubbotname:
+if git_user == githubbotname:
 
   items = [
     './.content/tasks/Variant_0.md',
