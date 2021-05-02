@@ -19,8 +19,8 @@ jobs:
           USER: ${{github.event.pusher.name}}
         run: |
              python3 .github/workflows/InitiallySelectTask.py
-             echo "$TASK"
-             TASKFILE = $TASK
+             echo "------------------"
+             echo "$TASK" >> $TASKFILE
              echo "$TASKFILE"
           
       - name: Commit files
