@@ -6,6 +6,8 @@ jobs:
   log-github-event-goodies:
     name: "Provide task randomly"
     runs-on: ubuntu-latest
+    env:
+      TASK: 'not defined'
     steps:
         # Checkout repository
       - name: Check out current repository
@@ -18,7 +20,6 @@ jobs:
         run: |
              python3 .github/workflows/InitiallySelectTask.py
              echo "$TASK"
-             echo "$MESSAGE"
           
       - name: Commit files
         run: |
