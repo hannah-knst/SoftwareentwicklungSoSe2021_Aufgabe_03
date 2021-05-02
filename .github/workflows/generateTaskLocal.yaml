@@ -19,7 +19,7 @@ jobs:
              python3 .github/workflows/InitiallySelectTask.py
              echo "------------------"
              echo "$TASK"
-             echo "task_file = echo "$TASK" >> $GITHUB_ENV
+             echo "task_file = $(echo $TASK)" >> $GITHUB_ENV
              echo "${{ env.task_file }}"
           
       - name: Commit files
