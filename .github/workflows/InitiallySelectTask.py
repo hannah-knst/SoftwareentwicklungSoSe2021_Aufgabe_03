@@ -25,11 +25,14 @@ splitingWords="## Aufgabenvariante"
 print(git_message)
 print(git_user)
 
+if git_user != githubbotname:
+  print("This is not an initial commit")
+
 if git_user == githubbotname:
 
   items = [
-    './.github/workflows/tasks/Variant_0.md',
-    './.github/workflows/tasks/Variant_1.md'
+    './.content/tasks/Variant_0.md',
+    './.content/tasks/Variant_1.md'
   ]
    
   # Select task file
