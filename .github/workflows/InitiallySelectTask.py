@@ -40,17 +40,16 @@ if git_user: #== githubbotname:
   
   # Read from original README.md
   with open(readmefilename, 'r') as readmefilehandle:
-          readmecontent = readmefilehandle.read()
+    readmecontent = readmefilehandle.read()
   
   # Read actual task description
   with open(taskname, 'r') as taskfilehandle:
-          taskcontent = taskfilehandle.read()
+    taskcontent = taskfilehandle.read()
   
   newreadmecontent = readmecontent.split(splitingWords)[0] + taskcontent
-  print(newreadmecontent)
   
   # Write adapted README.md
-  # with open(readmefilename, 'w') as readmefilehandle:
-  #        readmefilehandle.write(newreadmecontent)
+  with open(readmefilename, 'w') as readmefilehandle:
+    readmefilehandle.write(newreadmecontent)
    
   os.environ['TASK'] = taskname
