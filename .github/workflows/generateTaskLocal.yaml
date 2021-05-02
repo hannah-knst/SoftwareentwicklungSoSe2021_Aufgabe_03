@@ -19,19 +19,20 @@ jobs:
         run: |
              python3 .github/workflows/InitiallySelectTask.py
              echo "------------------"
-             echo "$TASK"
-             echo "task_file = \"$TASK\"" 
-             echo "task_file = \"$TASK\"" >> $GITHUB_ENV
-             echo "${{ env.task_file }}"
+             cat ./.content/task.log
+             echo "------------------"
+             TASK=$(cat ./.content/task.log)
+             echo "TASKFILE=$TASK" >> $GITHUB_ENV
+             echo "${{ env.TASKFILE }}"
           
       - name: Commit files
         run: |
-             echo "${{ env.task_file }}"
+             echo "${{ env.TASKFILE }}"
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
              git add README.md
              git status 
-             git commit -m "Replace Task - ${{ env.task_file }}" || echo "Task unchanged"
+             git commit -m "Replace Task - ${{ env.TASKFILE }}" || echo "Task unchanged"
              
       - name: Push changes
         uses: ad-m/github-push-action@master
