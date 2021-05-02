@@ -15,6 +15,7 @@ jobs:
         env:
           MESSAGE: ${{github.event.head_commit.message}}
           USER: ${{github.event.pusher.name}}
+          TASK: "not defined"
         run: |
              python3 .github/workflows/InitiallySelectTask.py
              echo "------------------"
