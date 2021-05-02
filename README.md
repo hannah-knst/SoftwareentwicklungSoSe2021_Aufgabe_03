@@ -20,8 +20,6 @@ Dabei nehmen Sie in Ihrem Team eine von zwei Rollen ein:
 >  | 5 & 6 | _Den Tag Ihres Geburtsdatums (z.B. für das Datum 01.05.1990 tragen Sie bitte 01 ein)._|
 >  | 7 | _Erster Buchstabe Ihres eigenen Vornamens (z.B. Emil = E)._|
 
-
-
 ## Bearbeitungszeit
 
 SWE: ... 2021 (Mm, BWM, ROB, BAI, BGIP, BBWL, BBL, MGIN)
@@ -30,4 +28,4 @@ Einführung in SWE: ... 2021 (KGB, BENG, VTC, MB)
 
 ## Aufgabenvariante 
 
-> An dieser Stelle wird gerade die Aufgabe für Sie generiert! Bitte in 5 Sekunden noch mal `F5` drücken
+> **An dieser Stelle wird gerade die Aufgabe für Sie generiert! Bitte in 5 Sekunden noch mal `F5` drücken**
