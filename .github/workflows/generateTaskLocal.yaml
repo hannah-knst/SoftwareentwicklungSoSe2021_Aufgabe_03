@@ -20,7 +20,7 @@ jobs:
         run: |
              python3 .github/workflows/InitiallySelectTask.py
              echo "------------------"
-             echo "$TASK" >> $TASKFILE
+             echo "TASKFILE=echo $TASK" >> $GITHUB_ENV
              echo "$TASKFILE"
           
       - name: Commit files
