@@ -16,10 +16,13 @@ jobs:
           MESSAGE: ${{github.event.head_commit.message}}
           USER: ${{github.event.pusher.name}}
         run: |
-          python3 .github/workflows/InitiallySelectTask.py
+             python3 .github/workflows/InitiallySelectTask.py
+             echo "$TASK"
+             echo "$MESSAGE"
           
       - name: Commit files
         run: |
+             echo "$TASK"
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
              git add README.md
