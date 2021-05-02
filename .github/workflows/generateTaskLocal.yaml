@@ -1,6 +1,6 @@
 name: Task generator 
 
-on: create
+on: push
 
 jobs:
   log-github-event-goodies:
