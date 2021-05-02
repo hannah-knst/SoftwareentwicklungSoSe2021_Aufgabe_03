@@ -9,7 +9,18 @@ Dabei nehmen Sie in Ihrem Team eine von zwei Rollen ein:
 | Projekt Maintainer | ... koordiniert die Implementierung und die Kommunikation mit dem Kunden, ist insbesondere für das Setup der Repositories verantwortlich. Dabei übernimmte der Maintainer in unserem Szenario auch die Aufgabe des Reviewers für den entstandenen "Code". |
 | Developer | ... realisiert die eigentliche Implementierung in separaten branches, die unter der Verantwortung des Maintainers auf das Produktionssytem (hier der main branch) abgebildet werden. |
 
-> Für die systematische Untersuchung Ihrer anonymisierten Aktivitäten ist es wichtig, dass Sie zunächst in einer Datei `team.config` Ihre Fragebogenschlüssel hinterlegen.  
+> Für die systematische Untersuchung Ihrer anonymisierten Aktivitäten ist es wichtig, dass Sie zunächst in einer Datei `team.config` Ihre *Fragebogenschlüssel und den GitHub Namen* hinterlegen. 
+> 
+> Zur Erinnerung, dieser setzte sich wie folgt zusammen:
+> 
+>  | Feld | Schlüssel |
+>  |------|-----------|
+>  | 1 & 2 | _Die ersten zwei Buchstaben des Vornamens Ihrer Mutter (oder einer Person die für Sie einer Mutter am nächsten kommt)._ |
+>  | 3 & 4 | _Die ersten zwei Buchstaben des Vornamens Ihres Vaters (oder einer Person die für Sie einem Vater am nächsten kommt)._  |
+>  | 5 & 6 | _Den Tag Ihres Geburtsdatums (z.B. für das Datum 01.05.1990 tragen Sie bitte 01 ein)._|
+>  | 7 | _Erster Buchstabe Ihres eigenen Vornamens (z.B. Emil = E)._|
+
+
 
 ## Bearbeitungszeit
 
