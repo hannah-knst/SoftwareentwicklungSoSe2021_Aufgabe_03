@@ -18,9 +18,6 @@ jobs:
           TASK: "not defined"
         run: |
              python3 .github/workflows/InitiallySelectTask.py
-             echo "------------------"
-             cat ./.content/task.log
-             echo "------------------"
              TASK=$(cat ./.content/task.log)
              echo "TASKFILE=$TASK" >> $GITHUB_ENV
              echo "${{ env.TASKFILE }}"

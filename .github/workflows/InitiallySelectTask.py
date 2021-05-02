@@ -55,6 +55,5 @@ if git_user: #== githubbotname:
   
   # Write task identifier to separate file
   with open(loggingfilename, 'w') as loggingfilehandle:
-    loggingfilehandle.write(taskname)
+    loggingfilehandle.write(taskname.split('/')[-1])
  
-  os.environ['TASK'] = taskname
