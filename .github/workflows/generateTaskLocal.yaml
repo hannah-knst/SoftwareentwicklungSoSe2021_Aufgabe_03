@@ -7,7 +7,7 @@ jobs:
     name: "Provide task randomly"
     runs-on: ubuntu-latest
     env:
-      TASK: 'not defined'
+      TASKFILE: 'not defined'
     steps:
         # Checkout repository
       - name: Check out current repository
@@ -20,10 +20,12 @@ jobs:
         run: |
              python3 .github/workflows/InitiallySelectTask.py
              echo "$TASK"
+             $TASKFILE = $TASK
+             echo "$TASKFILE"
           
       - name: Commit files
         run: |
-             echo "$TASK"
+             echo "$TASKFILE"
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
              git add README.md
