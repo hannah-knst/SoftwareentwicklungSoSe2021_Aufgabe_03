@@ -9,7 +9,7 @@ Dabei nehmen Sie in Ihrem Team eine von zwei Rollen ein:
 | Projekt Maintainer | ... koordiniert die Implementierung und die Kommunikation mit dem Kunden, ist insbesondere für das Setup der Repositories verantwortlich. Dabei übernimmte der Maintainer in unserem Szenario auch die Aufgabe des Reviewers für den entstandenen "Code". |
 | Developer | ... realisiert die eigentliche Implementierung in separaten branches, die unter der Verantwortung des Maintainers auf das Produktionssytem (hier der main branch) abgebildet werden. |
 
-> Für die systematische Untersuchung Ihrer anonymisierten Aktivitäten ist es wichtig, dass Sie zunächst in einer Datei `team.config` Ihre *Fragebogenschlüssel und den GitHub Namen* hinterlegen. 
+> Für die systematische Untersuchung Ihrer anonymisierten Aktivitäten ist es wichtig, dass Sie zunächst in einer Datei [team.config](https://github.com/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_04/blob/main/team.config) Ihre *Fragebogenschlüssel und den GitHub Namen* hinterlegen. 
 > 
 > Zur Erinnerung, dieser setzte sich wie folgt zusammen:
 > 
