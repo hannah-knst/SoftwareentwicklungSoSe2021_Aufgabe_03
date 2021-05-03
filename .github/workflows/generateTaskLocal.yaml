@@ -6,6 +6,7 @@ jobs:
   log-github-event-goodies:
     name: "Provide task randomly"
     runs-on: ubuntu-latest
+    if: github.event.pusher.name == "github-classroom[bot]"
     steps:
       - name: Check out current repository
         uses: actions/checkout@v2
@@ -14,7 +15,6 @@ jobs:
         env:
           MESSAGE: ${{github.event.head_commit.message}}
           USER: ${{github.event.pusher.name}}
-          TASK: "not defined"
         run: |
              python3 .github/workflows/InitiallySelectTask.py
              TASK=$(cat ./.content/task.log)
