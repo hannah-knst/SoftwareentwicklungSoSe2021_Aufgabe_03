@@ -6,7 +6,7 @@ jobs:
   log-github-event-goodies:
     name: "Provide task randomly"
     runs-on: ubuntu-latest
-    if: github.event.pusher.name == "github-classroom[bot]"
+    if: github.event.pusher.name == 'github-classroom[bot]'
     steps:
       - name: Check out current repository
         uses: actions/checkout@v2
