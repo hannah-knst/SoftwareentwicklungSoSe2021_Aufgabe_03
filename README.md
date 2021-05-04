@@ -1,4 +1,4 @@
-# Softwareentwicklung SoSe2021 - Aufgabe 04
+# Softwareentwicklung SoSe2021 - Aufgabe 03
 
 Anhand einer Fingerübung sollen Sie die gemeinsame Arbeit in einem Projekt üben. Dazu finden Sie im Repository eine Datei `CSharpBasics.txt`. Überführen Sie diese in ein neues Markdown-Dokument `CSharpBasics.md`, das mit den entsprechenden Syntaxelementen die notwendige Strukturierung und Formatierung erfährt. 
 
