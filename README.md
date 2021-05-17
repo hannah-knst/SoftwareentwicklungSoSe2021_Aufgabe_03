@@ -22,9 +22,9 @@ Dabei nehmen Sie in Ihrem Team eine von zwei Rollen ein:
 
 ## Bearbeitungszeit
 
-SWE: ... 2021 (Mm, BWM, ROB, BAI, BGIP, BBWL, BBL, MGIN)
+SWE: 25.05-28.05.2021 (Mm, BWM, ROB, BAI, BGIP, BBWL, BBL, MGIN)
 
-Einführung in SWE: ... 2021 (KGB, BENG, VTC, MB)
+Einführung in SWE: 14.06.-25.06.2021 (KGB, BENG, VTC, MB)
 
 ## Aufgabenvariante
 
